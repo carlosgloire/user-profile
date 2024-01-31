@@ -10,10 +10,37 @@
 <body class="bg-[#fbfcfd] ">
     <section class=" w-full ">
         <section class=" w-[90%] mx-auto m-[6%] md:flex bg-white rounded-lg  p-6 border">
-            <div class=" w-1/2  mb-10">
-                <div >
+            <div class=" w-1/2   mb-10 ">
+                <div class=" ">
                     <h1 class="text-2xl  font-semibold" >Mon profil</h1>
-                    <p class=" mt-10 "> <img class=" rounded-[50%] border object-cover " src="images/user.PNG" alt="Default image user"  height="150px" width="150px"></p>
+                    <p class=" mt-10 "> <img class=" w-[100px] h-[100px] md:w-[150px] md:h-[150px] rounded-[50%] border object-cover " src="images/user.PNG" alt="Default image user"  ></p>
+                    
+                    <p id="openPopup1" class="cursor-pointer"><i class="fa-solid fa-user-pen"></i></p>
+                    <div id="popup1" class="fixed left-0 top-0  w-full h-full z-10 duration-1000 ease-in-out bg-black bg-opacity-90 hidden">
+                        <div class=" absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[40%] border rounded  p-10 bg-white">
+                            <a href="#" id="closePopup1" class="float-right bg-[#272b3f] rounded hover:bg-red-600 ml-2"><i class="fa-solid fa-xmark text-white px-2 cursor-pointer "></i></a>
+                            <h1 class="text-2xl  font-semibold" >Mettre à jour mon profil</h1>
+                            <p class="">Ma photo de profil</p>
+                            <div class=" mb-3">
+                                <div class="user">
+                                    <div  class="custom-file-input">
+                                        <input  name="uploadfile" type="file" enctype="multipart/form-data" id="fileInput" class="hidden">
+                                        <label  for="fileInput">
+                                        <div class="text">
+                                            <p> 
+                                                <img class="rounded-[50%] border object-cover cursor-pointer" src="images/user.PNG" alt="Default image user" title="Ajoutez une photo de profil pour permettre une identification simple" width="100px" height="100px" >
+                                            </p>
+                                        </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="">
+                                <input class='bg-[#272b3f] text-white mt-2 px-6 rounded font-medium ' type="submit" name='modify_profile' value='Sauvegarder'> 
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="grid gap-2 mt-10  font-medium rounded">
                     <p>NDAYISABA Gloire</p>
@@ -24,25 +51,10 @@
             <div class='  md:w-1/2 text-lg '>
                 <div >
                     <div>
-                        <h1 class="text-2xl  font-semibold" >Mettre à jour mon profil</h1>
-                        <p class="text-blue-400 mb-4 text-sm">Gérez les paramètres de mon profil</p>
+                        <h1 class="text-2xl  font-semibold" >Mettre à jour mon compte</h1>
+                        <p class="text-blue-400 mb-4 text-sm">Gérez les paramètres de mon compte</p>
                     </div>
                     <form action="" method='post' class='mb-2' enctype="multipart/form-data">
-                        <p class="">Ma photo de profil</p>
-                        <div class=" items-center">
-                            <div class="user">
-                                <div  class="custom-file-input">
-                                    <input  name="uploadfile" type="file" enctype="multipart/form-data" id="fileInput" class="hidden">
-                                    <label  for="fileInput">
-                                    <div class="text">
-                                        <p> 
-                                            <img class="rounded-[50%] border object-cover cursor-pointer" src="images/user.PNG" alt="Default image user" title="Ajoutez une photo de profil pour permettre une identification simple" width="100px" height="100px" >
-                                        </p>
-                                    </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
                         <div class=" md:w-[80%]">
                             <div class='grid'>
                                 <label for="username">Noms d'utilisateur</label>
@@ -63,7 +75,7 @@
                     </form>
                         <a class="text-blue-500" id="openPopup" href="#" > Modifier mon mot de passe</a>
                 </div>
-                <div id="popup" class="fixed left-0 top-0  w-full h-full z-10 duration-1000 ease-in-out bg-black bg-opacity-70 hidden">
+                <div id="popup" class="fixed left-0 top-0  w-full h-full z-10 duration-1000 ease-in-out bg-black bg-opacity-90 hidden">
                     <div class=" absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[40%] border rounded  p-10 bg-white">
                         <a href="#" id="closePopup" class="float-right bg-[#272b3f] rounded hover:bg-red-600 ml-2"><i class="fa-solid fa-xmark text-white px-2 cursor-pointer "></i></a>
                         <p class="text-xl font-semibold mb-4">Modification du mot de passe</p>
